@@ -74,8 +74,8 @@
 .services {
   &__inner {
     margin: 110px auto;
-    height: 480px;
-    background-color: tomato;
+    min-height: 300px;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,23 +89,224 @@
     margin-top: 50px;
     margin-bottom: 70px;
   }
-
-
-
   &__box {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
     &-item {
-      max-width: 350px;
-      max-height: 140px;
-      &-title {
-        font-size: 18px;
-        line-height: 22px;
-        color: #000;
-      }
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
     }
     &-logo {
-      float: left;
+      min-width: 40px;
+      max-height: 80px;
+      border: 1px solid #4985FF;
+      padding: 20px;
+      border-radius: 50%;
+    }
+    &-content {
+      max-width: 200px;
+      max-height: 130px;
+      margin-left: 15px;
+    }
+    &-title {
+      font-size: 18px;
+      line-height: 22px;
+      color: #000;
+      margin-bottom: 10px;
+    }
+    &-text {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
+.about {
+  &__inner {
+    margin: 100px auto 70px auto;
+    min-height: 650px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+    border-bottom:  1px solid #E0E0E0;
+    &-title {
+      margin-top: 60px;
+      margin-bottom: 15px;
+    }
+    &-text {
+      margin-bottom: 20px;
+    }
+    &-left {
+      width: 500px;
+      margin-right: 100px;
+    }
+    &-right {
+      width: 500px;
+      height: 400px;
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__projects {
+    margin: 70px  auto 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    &-number {
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 53px;
+    }
+    &-text {
+      margin-left: 10px;
+    }
+    &-item + &-item {
+      margin-left: 100px;
+    }
+  }
+  &__image {
+    margin-right: 10px;
+  }
+}
+
+.activities {
+  background: linear-gradient(90deg, #504DC2 20.44%, #fff 80.91%), #C4C4C4;
+  &__inner {
+    background: linear-gradient(90deg, #504DC2 20.44%, #fff 80.91%), #C4C4C4;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    &-title {
+      width: 500px;
+      color: #fff;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      width: 350px;
+      margin-right: 15px;
+    }
+    &-img {
+      margin-bottom: 20px;
+    }
+    &-number {
+      font-size: 18px;
+      line-height: 22px;
+      color: #4985FF;
+    }
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
+    &-text {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.projects {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 130px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__text {
+    max-width: 700px;
+    margin: 50px auto;
+  }
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    margin-right: 20px;
+  }
+  &__button {
+    margin: 50px auto 0 auto;
+  }
+}
+
+.video {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('../images/video-bg-image.png') no-repeat;
+  &__inner {
+    min-height: 700px;
+  }
+  &__title {
+    color: #fff;
+    text-align: center;
+  }
+  &__text {
+    text-align: center;
+    color: #fff;
+  }
+  &__content {
+    margin-left: auto;
+    margin-top: 80px;
+    background:  url('../images/video-content-image.png') no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    min-height: 420px;
+    max-width: 960px;
+    position: relative;
+  }
+  &__button {
+    top: 40%;
+    left: 35%;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 200px;
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    &-img {
+      margin-left: -150px;
+    }
+    &-text {
+      color: #fff;
+      display: inline-block;
+      position: absolute;
+      top: 40%;
+      left: 130px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 25px;
     }
   }
 }
