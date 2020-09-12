@@ -183,9 +183,9 @@
 }
 
 .activities {
-  //background: linear-gradient(90deg, #504DC2 20.44%, #fff 80.91%), #C4C4C4;
+  background: linear-gradient(90deg, #504f 20.44%, #504DC2 80.91%), #C4C4C4;
   &__inner {
-    //background: linear-gradient(90deg, #504DC2 20.44%, #fff 80.91%), #C4C4C4;
+    background: linear-gradient(90deg, #504f 20.44%, #504DC2 80.91%), #C4C4C4;
     padding-top: 100px;
     padding-bottom: 150px;
     min-height: 650px;
@@ -388,20 +388,68 @@
       font-weight: 600;
       font-size: 18px;
       line-height: 22px;
+      margin-bottom: 15px;
     }
+  }
+  &__section + &__section {
+    margin-left: 120px;
   }
   &__copy {
     padding-top: 20px;
     font-size: 13px;
     line-height: 21px;
     text-align: center;
-    color: #999999;
+
     border-top: 1px solid #E0E0E0;
+  }
+  &__list {
+    list-style: none;
   }
   &__list-item {
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
     color: #999999;
+    margin-bottom: 20px;
+  }
+  &__link {
+    text-decoration: none;
+    color: #999999;
+  }
+  &__link-email::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url("../images/mail-image.svg") no-repeat top left;
+    margin-left: -25px;
+    margin-top: 4px;
+  }
+  &__link-phone::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url("../images/phone-image.svg") no-repeat top left;
+    margin-left: -25px;
+    margin-top: 4px;
+  }
+  &__link-location::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url("../images/location-image.svg") no-repeat top left;
+    margin-left: -25px;
+    margin-top: 4px;
+  }
+  &__link-main::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url("../images/right-arrow-image.svg") no-repeat top left;
+    margin-left: -20px;
+    margin-top: 5px;
   }
 }
